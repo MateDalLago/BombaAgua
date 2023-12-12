@@ -135,7 +135,7 @@ void loop() {
         char Letra = cliente.read();
         if (Letra == '\n') {
           if (LineaActual.length() == 0) {
-            // Enciende o apaga la bomba manualmente
+            // Enciende o apaga la bomba manual
             digitalWrite(pinLed, Estado);
             // Responde al cliente
             ResponderCliente(cliente);
@@ -156,6 +156,7 @@ void loop() {
     Serial.println();
   }
 
-  // Verifica si la bomba remota está encendida y realiza la acción correspondiente
+  
   if (BombaRemotaEncendida) {
     digitalWrite(pinLed, HIGH);
+}
