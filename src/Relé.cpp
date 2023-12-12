@@ -21,7 +21,6 @@ const String Pagina = R"====(
   </style>
   <script>
     function enviarComando(comando) {
-      // Código JavaScript para enviar comandos al servidor
     }
   </script>
 </head>
@@ -135,9 +134,7 @@ void loop() {
         char Letra = cliente.read();
         if (Letra == '\n') {
           if (LineaActual.length() == 0) {
-            // Enciende o apaga la bomba manual
             digitalWrite(pinLed, Estado);
-            // Responde al cliente
             ResponderCliente(cliente);
             break;
           } else {
