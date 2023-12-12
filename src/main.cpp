@@ -163,7 +163,6 @@ void loop() {
     Serial.println();
   }
 
-  // Verifica si la bomba remota está encendida y realiza la acción correspondiente
   if (BombaRemotaEncendida) {
     digitalWrite(pinLed, HIGH);
   } else {
