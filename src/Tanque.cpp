@@ -2,10 +2,10 @@
 
 const char* ssid = "Personal-110";
 const char* password = "AEKk6yXPtG";
-const char* serverIP = "192.168.1.38"; // Cambia esto con la IP del ESP8266 que controla la bomba
+const char* serverIP = "192.168.1.38"; // Cambiar con la IP del ESP8266 que controla la bomba
 const int serverPort = 80;
 
-const int flotantePin = D5;  // Cambiar al pin correcto según la conexión física
+const int flotantePin = D5;  // Cambiar al pin correcto 
 
 void enviarSenalRemota(String comando) {
   WiFiClient client;
@@ -58,7 +58,6 @@ void setup() {
 }
 
 void loop() {
-  // Puedes cambiar esto con tu propia lógica para encender y apagar la bomba
   boolean bombaEncendida = digitalRead(flotantePin) == HIGH;
 
   if (bombaEncendida) {
@@ -69,6 +68,5 @@ void loop() {
     enviarSenalRemota("apagar");
   }
 
-  // Considera usar un enfoque sin delay con millis() si es necesario
-  delay(5000); // Espera 5 segundos antes de enviar la siguiente señal
+  delay(5000);
 }
