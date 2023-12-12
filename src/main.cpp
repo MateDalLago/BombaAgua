@@ -143,7 +143,6 @@ void loop() {
         char Letra = cliente.read();
         if (Letra == '\n') {
           if (LineaActual.length() == 0) {
-            // Enciende o apaga la bomba manualmente
             digitalWrite(pinLed, Estado);
             // Responde al cliente
             ResponderCliente(cliente);
